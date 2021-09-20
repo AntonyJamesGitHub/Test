@@ -12,9 +12,7 @@ using System.Web.Http;
 namespace Interview.Controllers
 {
     public class ValuesController : ApiController
-    {
-        //Used Google Chrome extension "ReqBin HTTP Client" to test
-        
+    {   
         // GET api/values
         public List<Transaction> Get()
         {
@@ -24,13 +22,13 @@ namespace Interview.Controllers
         // GET api/values/5
         public Transaction Get(string id)
         {
-            return GetTransactions().Where(t => t.Id == id).FirstOrDefault(); //TODO: do something if FirstOrDefault returns null?
+            return GetTransactions().Where(t => t.Id == id).FirstOrDefault(); // AJA note: consider doing something if FirstOrDefault returns null
         }
 
         // POST api/values
         public void Post([FromBody]Transaction value)
         {
-            //TODO: avoid reading and rewriting entire file as explained here - https://stackoverflow.com/questions/43529386/append-data-in-a-json-file-in-c-sharp/43529523
+            // AJA note: avoid reading and rewriting entire file as explained here - https://stackoverflow.com/questions/43529386/append-data-in-a-json-file-in-c-sharp/43529523
 
             var transactionList = GetTransactions();
             transactionList.Add(value);
@@ -68,7 +66,7 @@ namespace Interview.Controllers
             File.WriteAllText(@"C:\VisualStudioProjects\Test\data.json", json);
         }
 
-        private List<Transaction> GetTransactions()
+        public List<Transaction> GetTransactions()
         {
             string json = File.ReadAllText(@"C:\VisualStudioProjects\Test\data.json");
             var transactionList = JsonConvert.DeserializeObject<List<Transaction>>(json);

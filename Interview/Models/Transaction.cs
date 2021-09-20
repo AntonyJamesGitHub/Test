@@ -8,9 +8,9 @@ using System.Web;
 
 namespace Interview.Models
 {
-    //TODO: move enums elsewhere
-    //TODO: consider changing Id from string to Guid
-    
+    // AJA note: consider moving enums elsewhere
+    // AJA note: consider whether Id should remain as string instead of Guid
+
     public enum TransactionType
     {
         [EnumMember(Value = "Debit")]
