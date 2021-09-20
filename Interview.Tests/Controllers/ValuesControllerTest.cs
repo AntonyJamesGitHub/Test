@@ -126,16 +126,16 @@ namespace Interview.Tests.Controllers
 
             // Act Post
             controller.Post(tPost);
-            List<Transaction> tsPostPost = controller.GetTransactions();
+            List<Transaction> tsPostPost = controller.ReadTransactions(ValuesController.Path);
             Transaction resultPost = tsPostPost.ElementAt(tsPostPost.Count - 1);
             // Act Put
             controller.Put("f52d2378-ee2b-4061-a24e-ff3ef6c4c327", tPut);
-            List<Transaction> tsPostPut = controller.GetTransactions();
+            List<Transaction> tsPostPut = controller.ReadTransactions(ValuesController.Path);
             Transaction resultPut = tsPostPut.ElementAt(tsPostPut.Count - 1);
             // Act Delete
             bool resultPreDelete = tsPostPut.Exists(t => t.Id == tPut.Id);
             controller.Delete("f52d2378-ee2b-4061-a24e-ff3ef6c4c327");
-            List<Transaction> tsPostDelete = controller.GetTransactions();
+            List<Transaction> tsPostDelete = controller.ReadTransactions(ValuesController.Path);
             bool resultPostDelete = tsPostDelete.Contains(tPut);
 
             // Assert Post
