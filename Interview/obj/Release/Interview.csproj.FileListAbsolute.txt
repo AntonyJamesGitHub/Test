@@ -41,7 +41,6 @@ C:\VisualStudioProjects\Test\Interview\bin\System.Web.WebPages.xml
 C:\VisualStudioProjects\Test\Interview\bin\System.Web.WebPages.Deployment.xml
 C:\VisualStudioProjects\Test\Interview\bin\System.Web.WebPages.Razor.xml
 C:\VisualStudioProjects\Test\Interview\bin\Antlr3.Runtime.pdb
-C:\VisualStudioProjects\Test\Interview\obj\Release\Interview.csprojAssemblyReference.cache
 C:\VisualStudioProjects\Test\Interview\obj\Release\Interview.csproj.CopyComplete
 C:\VisualStudioProjects\Test\Interview\obj\Release\Interview.dll
 C:\VisualStudioProjects\Test\Interview\obj\Release\Interview.pdb
