@@ -1,0 +1,1 @@
+C:\VisualStudioProjects\Test\Interview.Tests\obj\Release\Interview.Tests.csprojAssemblyReference.cache
